@@ -16,7 +16,7 @@ def override(local_dict, prefix):
             for suffix, processor in suffixes.items():
                 if key_name.endswith(suffix):
                     value = processor(value)
-                    key_name = key_name[:len(suffix)]
+                    key_name = key_name[:len(key_name)-len(suffix)]
                     break
 
             local_dict[key_name] = value
